@@ -1,21 +1,24 @@
 import styled from 'styled-components';
 import type { NextPage } from 'next';
+import Checkout from '../components/Checkout';
+import TabSelect from '../components/TabSelect';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Title>My page ATUA</Title>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-        neque, ab eligendi natus nostrum optio.
-      </p>
+      <PageWrapper>
+        <Checkout />
+        <TabSelect />
+      </PageWrapper>
     </>
   );
 };
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+const PageWrapper = styled.div`
+  height: 100%;
+  display: grid;
+  gap: 128px;
+  place-content: center;
 `;
 
 export default Home;
